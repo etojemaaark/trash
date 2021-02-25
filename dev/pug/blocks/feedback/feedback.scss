@@ -1,0 +1,153 @@
+.feedback {
+	display: flex;
+	padding-bottom: 30px;
+	&__slider {
+		width: 1165px;
+		margin: 0;
+		padding: 0 20px;
+		background-color: $bgc;
+	}
+	&__slider-wrapper {
+		display: flex;
+		align-items: center;
+	}
+	&__slider-slide {
+		width: 350px;
+		height: 216px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// margin: 0 20px;
+		transition: all 0.3s ease 0s;
+		&:hover .feedback__slider-after {
+			opacity: 1;
+			visibility: visible;
+		}
+		&:hover .feedback__slider-before {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	&__slider-before {
+		transition: all 0.3s ease 0s;
+	}
+	&__slider-after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+		max-width: 350px;
+		width: 100%;
+		max-height: 216px;
+		height: 100%;
+		padding: 30px 28px;
+		display: flex;
+		margin: 0 auto;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background-color: white;
+		transition: all 0.3s ease 0s;
+		&::after {
+			content: url("../images/svg/quotation.svg");
+			position: absolute;
+			right: 16px;
+			top: -17px;
+		}
+		img {
+			width: auto;
+			height: 30px;
+			margin-bottom: 24px;
+			display: inline-block;
+		}
+		p {
+			margin-bottom: 20px;
+			font-size: 14px;
+			line-height: 140%;
+			letter-spacing: 0.03em;
+			color: $text;
+		}
+		a {
+			font-size: 14px;
+			line-height: 140%;
+			letter-spacing: 0.03em;
+			color: $text;
+			opacity: 0.7;
+			.icon-arrow {
+				stroke: $main;
+			}
+		}
+	}
+	&__text {
+		max-width: 755px;
+		width: 100%;
+		background-color: $dark;
+		position: relative;
+		padding: 115px 0 115px 70px;
+		.h2 {
+			color: white;
+			text-align: left;
+			margin-bottom: 24px;
+		}
+		.subtitle {
+			text-align: left;
+			color: white;
+			max-width: 251px;
+			margin: 0 0 56px 0;
+		}
+	}
+	&__text-navigation {
+		display: flex;
+		align-items: center;
+		// position: relative;
+	}
+	&__text-button-next {
+		position: static;
+	}
+	&__text-button-prev {
+		position: static;
+	}
+	&__text-progressbar {
+		position: relative;
+		width: 165px;
+		height: 3px;
+		background: #fff;
+		margin-right: 20px;
+		.swiper-pagination-progressbar-fill {
+			background: $main;
+			height: 3px;
+		}
+		.swiper-pagination-progressbar {
+			background: white;
+		}
+	}
+}
+@media (max-width: $md3) {
+	.feedback {
+		display: none;
+		&__slider-slide {
+			max-width: 350px;
+			width: 100%;
+			max-height: 200px;
+			height: 100%;
+			margin: 0 10px;
+		}
+		&__slider-before {
+			display: none;
+		}
+		&__slider-after {
+			opacity: 1;
+			visibility: visible;
+			width: 100%;
+			max-height: 200px;
+			height: 100%;
+		}
+		&__text {
+			padding: 115px 0 115px 35px;
+		}
+	}
+}

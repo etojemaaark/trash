@@ -1,0 +1,46 @@
+.industrial {
+	padding: 75px 0;
+	&__listing {
+		display: grid;
+		// grid-template-rows: repeat(auto-fit, minmax(209px, 1fr));
+		grid-template-columns: repeat(auto-fit, 270px);
+		grid-gap: 10px;
+		justify-content: center;
+	}
+	&__listing-item {
+		text-align: center;
+		width: 100%;
+		padding: 41px 15px 20px 15px;
+		background-color: $bgc;
+		transition: all 0.3s ease 0s;
+		img {
+			width: 140px;
+			height: 80px;
+			margin-bottom: 40px;
+		}
+		&:hover {
+			transform: scale(0.97);
+		}
+	}
+	&__listing-name {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		p {
+			font-size: 14px;
+			line-height: 140%;
+			letter-spacing: 0.03em;
+			color: $dark;
+		}
+	}
+	&__listing-btn {
+		padding: 11px 88px 11px 68px;
+	}
+}
+
+@media (max-width: $md3) {
+	.industrial {
+		padding: 30px 0;
+	}
+}

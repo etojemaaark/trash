@@ -1,0 +1,127 @@
+.delivery {
+	padding: 75px 0 150px 0;
+	.h2 {
+		margin-bottom: 80px;
+	}
+	&__content {
+		display: grid;
+		grid-template-areas:
+			"item-1 item-2"
+			"item-1 item-3";
+		grid-gap: 30px;
+		grid-template-rows: repeat(2, 206px);
+		grid-template-columns: repeat(2, 540px);
+	}
+	&__left {
+		padding: 40px 30px 67px 32px;
+		background-color: $dark;
+		grid-area: item-1;
+		.title {
+			font-family: $ff-title;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 140%;
+			letter-spacing: 0.06em;
+			color: #ffffff;
+			margin-bottom: 36px;
+		}
+	}
+	&__left-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 32px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		p {
+			&:first-child {
+				font-family: $ff-title;
+				font-weight: 700;
+				font-size: 48px;
+				line-height: 140%;
+				letter-spacing: 0.06em;
+				color: $main;
+				opacity: 0.45;
+				margin-right: 30px;
+				min-width: 57px;
+			}
+			&:last-child {
+				font-size: 16px;
+				line-height: 140%;
+				letter-spacing: 0.04em;
+				color: #ffffff;
+			}
+		}
+	}
+	&__right {
+		// max-width: 540px;
+		// height: 100%;
+	}
+	&__left {
+		grid-area: item-1;
+	}
+	&__right-item-one {
+		grid-area: item-2;
+	}
+	&__right-item-two {
+		grid-area: item-3;
+	}
+	&__right-item-one,
+	&__right-item-two {
+		padding: 40px 32px 42px 32px;
+		border-bottom: 4px solid $main;
+		background-color: $bgc;
+		// height: calc((100% - 30px) / 2);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.title {
+			font-family: $ff-title;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 140%;
+			letter-spacing: 0.06em;
+			color: $text;
+			margin-bottom: 20px;
+		}
+		.subtitle {
+			text-align: left;
+			margin: 0;
+		}
+	}
+}
+@media (max-width: $maxWC) {
+	.delivery {
+		&__content {
+			display: grid;
+			grid-template-areas:
+				"item-1"
+				"item-1"
+				"item-2"
+				"item-3";
+			grid-gap: 30px;
+			grid-template-rows: repeat(4, auto);
+			grid-template-columns: minmax(290px, 540px);
+			justify-content: center;
+		}
+	}
+}
+@media (max-width: $md3) {
+	.delivery {
+		&__content {
+			margin: 0 5px;
+		}
+	}
+}
+@media (max-width: 425px) {
+	.delivery {
+		padding: 30px 0;
+		h2 {
+			background-color: white !important;
+			margin-bottom: 30px;
+		}
+		&__left-item {
+			display: block;
+		}
+	}
+}

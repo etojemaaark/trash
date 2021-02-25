@@ -1,0 +1,29 @@
+section.calculator
+	.calculator__wrapper.container
+		.calculator__left
+			img(src="static/images/content/calculator/calculator.png", alt="")
+		.calculator__right
+			.title Бесплатно рассчитаем сколько освещения нужно вашему помещению
+			p Тип помещения
+			.calculator__right-radio-group
+				.calculator__right-radio-item
+					input(id="radio-1" type="radio" name="radio" value="1")
+					label(for="radio-1") офисное	
+				.calculator__right-radio-item
+					input(id="radio-2" type="radio" name="radio" value="2")
+					label(for="radio-2") промышленное
+				.calculator__right-radio-item
+					input(id="radio-3" type="radio" name="radio" value="3")
+					label(for="radio-3") уличное
+			.calculator__right-range-group
+				.calculator__right-range-item
+					label(for="range-1") Общая площадь
+						span 1000 м
+							sup 2
+					input(id="range-1" name="range" type="range" min="0" max="1000" value="0")
+				.calculator__right-range-item
+					label(for="range-1") Высота потолка
+						span 3.2 м
+					input(id="range-1" name="range" type="range" min="0" max="1000" value="0")
+			.calculator__right-btn-wrapper
+				a.calculator__right-btn.btn(href="") получить расчет

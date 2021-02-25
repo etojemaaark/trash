@@ -1,0 +1,43 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		meta(name="description" content=description)
+		link(href="static/images/general/favicon.svg" rel="shortcut icon" type="image/svg")
+		link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js" defer)
+		<![endif]-->
+	body
+		include ../blocks/header/header
+		include ../blocks/main/main
+		include ../blocks/catalog/catalog
+		include ../blocks/industrial/industrial
+		include ../blocks/office/office
+		include ../blocks/help/help
+		include ../blocks/interior/interior
+		include ../blocks/irradiator/irradiator
+		include ../blocks/delivery/delivery
+		include ../blocks/calculator/calculator
+		include ../blocks/about/about
+		include ../blocks/feedback/feedback
+		//- include ../blocks/projects/projects
+		include ../blocks/contacts/contacts
+		include ../blocks/footer/footer
+		block content
+		//- script(src="static/js/jquery-3.3.1.min.js")
+		//- script(src="static/js/libs.min.js")
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		script(src="static/js/main.js")
+		//- script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous")
+		//- script(src="static/js/catalog.js")

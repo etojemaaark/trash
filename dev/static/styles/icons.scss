@@ -1,0 +1,117 @@
+.icon-mail {
+	width: 20px;
+	height: 14px;
+	fill: white;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		fill: $main;
+	}
+	&:active {
+		fill: $maindark;
+	}
+}
+.icon-phone-mob {
+	width: 18px;
+	height: 18px;
+	fill: white;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		fill: $main;
+	}
+	&:active {
+		fill: $maindark;
+	}
+}
+.icon-catalog {
+	width: 22px;
+	height: 18px;
+	fill: $text;
+}
+.icon-production {
+	width: 35px;
+	height: 35px;
+	margin-right: 12px;
+}
+.icon-custom {
+	width: 23px;
+	height: 30px;
+	margin-right: 13px;
+}
+.icon-arrow {
+	width: 15px;
+	height: 9px;
+	stroke: $text;
+}
+.icon-prev {
+	width: 19px;
+	height: 30px;
+	fill: rgba(140, 208, 223, 0.8);
+	cursor: pointer;
+	margin-right: 20px;
+	&:hover {
+		fill: $main;
+	}
+}
+.icon-prev-2 {
+	width: 19px;
+	height: 30px;
+	fill: rgba(140, 208, 223, 0.8);
+	cursor: pointer;
+	transform: rotate(180deg);
+	&:hover {
+		fill: $main;
+	}
+}
+.icon-address{
+	width: 28px;
+	height: 30px;
+	fill: $text;
+}
+.icon-phone{
+	width: 32px;
+	height: 28px;
+	fill: $text;
+}
+.icon-clip{
+	width: 13px;
+	height: 25px;
+	fill: $main;
+	margin-right: 13px;
+}
+@media (max-width: $md2) {
+	.icon-production {
+		width: 24px;
+		height: 24px;
+	}
+	.icon-custom {
+		width: 18px;
+		height: 24px;
+		margin-right: 18px;
+	}
+}
+@media (max-width: $md3) {
+	.icon-production {
+		width: 35px;
+		height: 35px;
+		margin-right: 12px;
+	}
+	.icon-custom {
+		width: 23px;
+		height: 30px;
+		margin-right: 13px;
+	}
+}
+@media (max-width: 340px) {
+	.icon-production {
+		width: 45px;
+		height: 45px;
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.icon-custom {
+		width: 30px;
+		height: 39px;
+		margin-right: 0px;
+		margin-bottom: 28px;
+	}
+}
